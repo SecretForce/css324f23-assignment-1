@@ -49,7 +49,16 @@ def h1(s):
     return res
 
 def h3(s):
-    # implement this function
     board, _, _ = s
-	wjidsaijdsaod
-    return 0
+    returnnum = 0
+
+    for idx in range(0, 9):
+        if board[idx] != 0:
+            if (board[idx] - 1) // 3 != idx // 3:
+                # row diff
+                returnnum += 1
+            if (board[idx] - 1) % 3 != idx % 3:
+                # col diff
+                returnnum += 1
+
+    return returnnum
