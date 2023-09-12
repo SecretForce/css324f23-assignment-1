@@ -6,37 +6,37 @@ def is_goal(s):
 
 def successors(s):
     x, y, z = s
-    t = 8 - x
-    if (t > 0) and (y > 0):
-	    if y > t:
-		    yield((8,y-t,z),t)
+    tf = 8 - x
+    if (tf > 0) and (y > 0):
+	    if y > tf:
+		    yield((8,y-tf,z),tf)
 	    else:
 		    yield((x+y,0,z),y)
-    if (t > 0) and (z > 0):
-	    if z > t:
-		    yield((8,y,z-t),t)
+    if (tf > 0) and (z > 0):
+	    if z > tf:
+		    yield((8,y,z-t),tf)
 	    else:
 		    yield((x+z,y,0),z)
-    t = 5 - y
-    if (t > 0) and (x > 0):
-	    if x > t:
-		    yield((x-t,5,z),t)
+    ts = 5 - y
+    if (ts > 0) and (x > 0):
+	    if x > ts:
+		    yield((x-ts,5,z),ts)
 	    else:
 		    yield((0,y+x,z),x)
-    if (t > 0) and (z > 0):
-	     if z > t:
-		     yield((x,5,z-t),t)
+    if (ts > 0) and (z > 0):
+	     if z > ts:
+		     yield((x,5,z-ts),ts)
 	     else:
 		     yield((x,y+z,0),z)
-    t = 3 - z
-    if (t > 0) and (x > 0):
-	     if x > t:
-		     yield((x-t,y,3),t)
+    tt = 3 - z
+    if (tt > 0) and (x > 0):
+	     if x > tt:
+		     yield((x-tt,y,3),tt)
 	     else:
 		     yield((0,y,z+x),x)
-    if (t > 0) and (y > 0):
-	     if y > t:
-		     yield((x,y-t,3),t)
+    if (tt > 0) and (y > 0):
+	     if y > tt:
+		     yield((x,y-tt,3),tt)
 	     else:
 		     yield((x,0,z+y),y)
     
