@@ -10,5 +10,31 @@ def successors(s):
     if (t > 0) and (y > 0):
 	    if y > t:
 		    yield((8,y-t,z),t)
-		
+	    else:
+		    yield((x+y,0,z),y)
+    if (t > 0) and (z > 0):
+	    if z > t:
+		    yield((8,y,z-t),t)
+	    else:
+		    yield((x+z,y,0),z)
+     if (t > 0) and (x > 0):
+	    if x > t:
+		    yield((x-t,5,z),t)
+	    else:
+		    yield((0,y+x,z),x)
+     if (t > 0) and (z > 0):
+	     if z > t:
+		     yield((x,5,z-t),t)
+	     else:
+		     yield((x,y+z,0),z)
+     if (t > 0) and (x > 0):
+	     if x > t:
+		     yield((x-t,y,3),t)
+	     else:
+		     yield((0,y,z+x),x)
+     if (t > 0) and (y > 0):
+	     if y > t:
+		     yield((x,y-t,3),t)
+	     else:
+		     yield((x,0,z+y),z)
     
