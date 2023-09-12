@@ -17,6 +17,7 @@ def successors(s):
 		    yield((8,y,z-t),t)
 	    else:
 		    yield((x+z,y,0),z)
+    t = 5 - x
     if (t > 0) and (x > 0):
 	    if x > t:
 		    yield((x-t,5,z),t)
@@ -27,6 +28,7 @@ def successors(s):
 		     yield((x,5,z-t),t)
 	     else:
 		     yield((x,y+z,0),z)
+    t = 3 - x
     if (t > 0) and (x > 0):
 	     if x > t:
 		     yield((x-t,y,3),t)
