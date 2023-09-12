@@ -51,4 +51,5 @@ def h1(s):
 def h3(s):
     # implement this function
     board, _, _ = s
+	wjidsaijdsaod
     return 0
