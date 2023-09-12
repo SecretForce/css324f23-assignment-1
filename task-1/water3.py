@@ -38,5 +38,5 @@ def successors(s):
 	     if y > t:
 		     yield((x,y-t,3),t)
 	     else:
-		     yield((x,0,z+y),z)
+		     yield((x,0,z+y),y)
     
