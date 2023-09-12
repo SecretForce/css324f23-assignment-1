@@ -50,15 +50,12 @@ def h1(s):
 
 def h3(s):
     board, _, _ = s
-    returnnum = 0
+    result = 0
 
     for idx in range(0, 9):
-        if board[idx] != 0:
-            if (board[idx] - 1) // 3 != idx // 3:
-                # row diff
-                returnnum += 1
-            if (board[idx] - 1) % 3 != idx % 3:
-                # col diff
-                returnnum += 1
+        if (board[idx] != 0):
+            row_diff = abs(((board[idx] - 1) // 3) - (idx // 3))  # Calculate row difference
+            col_diff = abs(((board[idx] - 1) % 3) - (idx % 3))  # Calculate column difference
+            result += row_diff + col_diff  # Add both differences to the result
 
-    return returnnum
+    return result
